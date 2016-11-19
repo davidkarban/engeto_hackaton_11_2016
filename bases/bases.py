@@ -11,13 +11,18 @@ def decimal_to_binary(decimal):
             result = "1" + result
     return(result)
 
+# convert binary to decimal
 def binary_to_decimal(binary):
     result = 0
     for x in binary:
         result = (result << 1) + int(x)
     return(result)
 
-print(decimal_to_binary(130))
+# universal 
+def convert_to_decimal(number, srcbase):
+    result = 0
+    for x in number:
+        result = (result * srcbase) + int(x, srcbase)
+    return(result)
 
-print(binary_to_decimal("10000010"))
 
