@@ -12,10 +12,9 @@ def decimal_to_binary(decimal):
     return(result)
 
 def binary_to_decimal(binary):
-    strlen = len(binary)
     result = 0
-    for x in range(strlen):
-        result = (result << 1) + int(binary[x])
+    for x in binary:
+        result = (result << 1) + int(x)
     return(result)
 
 print(decimal_to_binary(130))
