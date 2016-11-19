@@ -9,11 +9,16 @@ def decimal_to_binary(decimal):
             result = "0" + result
         else: 
             result = "1" + result
-    print("")
     return(result)
 
-#def get_binary(binariy)
-
+def binary_to_decimal(binary):
+    strlen = len(binary)
+    result = 0
+    for x in range(strlen):
+        result = (result << 1) + (ord(binary[x]) - 48)
+    return(result)
 
 print(decimal_to_binary(130))
+
+print(binary_to_decimal("10000010"))
 
